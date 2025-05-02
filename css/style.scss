@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+$bg_color: #f0f0f1;
+$base_color: #ffffff;
+$primary_color: #212121;
+$two_color: #757575;
+$three_color: #616161;
+$four_color: #eff3fd;
+$five_color: #3563e9;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  background-color: $bg_color;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  overflow-x: hidden;
+  letter-spacing: 0.2px;
+  text-decoration: none;
+}
+
+.align_center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+//About_Content#
+#about_content {
+  width: 100%;
+  background-color: $base_color;
+  padding: 80px 0;
+
+  //about_content
+  .about_content {
+    //&_left
+    &_left {
+      img {
+        width: 100%;
+      }
+    }
+
+    //&_right
+    &_right {
+      h4 {
+        font-size: 20px;
+        font-weight: 400;
+        text-transform: capitalize;
+        color: $two_color;
+        line-height: normal;
+      }
+      h5 {
+        padding-top: 15px;
+        font-size: 48px;
+        font-weight: 600;
+        text-transform: capitalize;
+        color: $primary_color;
+        line-height: normal;
+      }
+      h6 {
+        padding-top: 30px;
+        font-size: 20px;
+        font-weight: 400;
+        text-transform: capitalize;
+        color: $two_color;
+        line-height: 28px;
+      }
+      a {
+        display: inline-block;
+        text-decoration: none;
+        margin-top: 30px;
+        span {
+          color: $five_color;
+          font-size: 16px;
+          font-weight: 500;
+          line-height: normal;
+          text-transform: capitalize;
+          &:last-child {
+            margin-left: 10px;
+          }
+        }
+      }
+    }
+
+    //Large
+    @media screen and (max-width: 1200px) {
+      //&_right
+      &_right {
+        h5 {
+          font-size: 40px;
+        }
+      }
+    }
+    //Notebook
+    @media screen and (max-width: 992px) {
+      text-align: center;
+      //&_right
+      &_right {
+        padding-top: 30px;
+        h4 {
+          font-size: 18px;
+        }
+        h5 {
+          font-size: 35px;
+        }
+        h6 {
+          font-size: 18px;
+        }
+      }
+    }
+    //Tablet
+    @media screen and (max-width: 575px) {
+      //&_right
+      &_right {
+        h4 {
+          font-size: 16px;
+        }
+        h5 {
+          font-size: 30px;
+        }
+        h6 {
+          font-size: 16px;
+          line-height: 25px;
+        }
+      }
+    }
+    //Mobil
+    @media screen and (max-width: 480px) {
+      //&_right
+      &_right {
+        h4 {
+          font-size: 14px;
+        }
+        h5 {
+          font-size: 25px;
+        }
+        h6 {
+          font-size: 14px;
+          line-height: 21px;
+        }
+      }
+    }
+  }
+}
